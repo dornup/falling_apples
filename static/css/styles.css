@@ -1,0 +1,119 @@
+/* Общие настройки */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+:root {
+    --dark_bg: #434149;
+    --dark_primary: #dbd4b6;
+    --dark_second: beige;
+}
+
+
+body {
+    background-color: var(--dark_bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p, label, .btn, input, a, nav li {
+    color: var(--dark_primary);
+    font-family: "Comfortaa", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 300;
+    font-style: italic;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark_second);
+}
+
+input, .form-control {
+    background-color: var(--dark_primary);
+    box-shadow: inset -13px -10px 15px 5px rgba(0,0,0,0.1);
+}
+
+/* Оформление */
+
+nav {
+    border-radius: 24px;
+    background: #434149;
+    box-shadow:  16px 16px 32px #35333a,
+             -16px -16px 32px #514f58;
+    height: 10vh;
+    width: 100vw;
+}
+
+nav li{
+    list-style-type: none;
+    font-size: 30px;
+}
+
+section#welcome {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+
+    /* Для фоновых логотипов */
+    position: relative;
+}
+
+/* Фоновые логотипы */
+section#welcome .bg_logo {
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    width: 100vw;
+    transform: translateY(-50%);
+    height: 50vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+section#welcome .bg_logo img {
+        width: 75px;
+        /* position: absolute;
+        z-index: -1; */
+        /* left: 50px; */
+
+        /* Инверсия цветов */
+        filter: invert(95%); 
+}
+
+/* Блок регистрации */
+
+section#register h1, section#login h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+section#register .form-group label, section#login .form-group label{
+    font-size: 25px;
+}
+section#register .form-group, section#login .form-group{
+    margin-bottom: 10px;
+}
+
+section#register .btn, section#login .btn {
+    background-color: var(--dark_primary);
+    color: var(--dark_bg);
+    margin-top: 15px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+}
+
+section#register, section#login {
+    width: 30vw;
+    margin: 0px auto 100px;
+}
+
+section#register a, section#login a {
+    display: inline-block  ;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

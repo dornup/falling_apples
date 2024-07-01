@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% block head %}
+<title>
+  {{ ['ты красивый', 'ты солнышко', 'ты умничка'] | random }}
+</title>
+
+<link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }}>
+{% endblock head %}
+{% block content %}
+
+{% include '_nav.html'   %}
+
+<main>
+  <h1>Привет, {{ current_user.login }}</h1>
+</main>
+
+{% endblock content%}
+
+{% block footer %}
+  
+{% endblock footer %}
