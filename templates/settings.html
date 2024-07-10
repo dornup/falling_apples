@@ -12,15 +12,28 @@
 
 <main>
     <section class="avatar">
+        <div class="container">
         <div class="mask">
             <div class="img"></div>
         </div>
         <button>Изменить</button>
         <button>Удалить</button>
         <input type="range" id="ava_round" min="5" max="50" value="5">
+        </div>
     </section>
     <section class="general">
-        123
+        <h1>Настройки профиля</h1>
+        <div class="attribute">
+            <label>Логин</label>
+            <input class='form-control' type="text" value={{current_user.login}}>
+            <button class="btn" disabled>Изменить</button>
+        </div>
+        <div class="attribute">
+            <label>Пароль</label>
+            <input class='form-control' type="text" value={{current_user.login}}>
+            <button class="btn" disabled>Изменить</button>
+        </div>
+        <p>Пользователь с {{ "10.04.24" }}</p>
     </section>
 </main>
 {% endblock content %}

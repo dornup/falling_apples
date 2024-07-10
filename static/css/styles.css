@@ -27,9 +27,20 @@ a:hover {
     color: var(--dark_second);
 }
 
-input, .form-control {
+.btn:disabled {
+    opacity: 0.3;
+}
+
+section#register .btn, section#login .btn {
+    margin-top: 15px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+input, .form-control, .btn, .btn:hover, .btn:disabled{
     background-color: var(--dark_primary);
     box-shadow: inset -13px -10px 15px 5px rgba(0,0,0,0.1);
+    color: var(--dark_bg);
 }
 
 /* Оформление */
@@ -95,15 +106,6 @@ section#register .form-group label, section#login .form-group label{
 }
 section#register .form-group, section#login .form-group{
     margin-bottom: 10px;
-}
-
-section#register .btn, section#login .btn {
-    background-color: var(--dark_primary);
-    color: var(--dark_bg);
-    margin-top: 15px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-
 }
 
 section#register, section#login {
