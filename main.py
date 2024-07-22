@@ -91,4 +91,9 @@ def login():
 def home():
     return render_template('home.html')
 
+@app.route('/change_login', methods=['POST'])
+@login_required
+def change_login():
+    return 1
+
 app.run(debug=True)

@@ -23,15 +23,18 @@
     </section>
     <section class="general">
         <h1>Настройки профиля</h1>
-        <div class="attribute">
+        <div class="attribute" id="login">
             <label>Логин</label>
-            <input class='form-control' type="text" value={{current_user.login}}>
-            <button class="btn" disabled>Изменить</button>
+            <form method="post">
+            <input name='email' class='form-control' type="text" value={{current_user.login}}>
+            <button type='submit' class="btn" disabled>Изменить</button>
+            </form>
         </div>
         <div class="attribute">
             <label>Пароль</label>
-            <input class='form-control' type="text" value={{current_user.login}}>
-            <button class="btn" disabled>Изменить</button>
+            <div title="почта не подтверждена"><button class="btn status" disabled>Забыл Пароль</button></div>
+            <button class="btn" >Изменить</button>
+            
         </div>
         <p>Пользователь с {{ "10.04.24" }}</p>
     </section>

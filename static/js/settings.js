@@ -3,3 +3,18 @@ document.getElementById('ava_round').addEventListener('input', function() {
     console.log(this.value)
     document.querySelector('main .avatar .mask').style.borderRadius = this.value + '%';
 })
+
+/* -------- settings. login ---------- */
+const loginInput = document.querySelector('.attribute#login input')
+const loginButton = document.querySelector('.attribute#login button')
+const loginValue = loginInput.value
+
+loginInput.addEventListener('input', () => {
+    loginButton.disabled = loginInput.value == loginValue
+})
+
+// отправление
+document.querySelector('#login form').addEventListener('submit', () => {
+    e.preventDefault() // сброс стандартного поведения (чтобы не было перезагрузки)
+    console.log(e)
+})
