@@ -18,7 +18,7 @@ document.querySelector('#login form').addEventListener('submit', (e) => {
     e.preventDefault() // сброс стандартного поведения (чтобы не было перезагрузки);
     const data = new FormData(e.target); // формирование форм
     fetch('/change_login', {
-        method = 'POST',
-        body = data
+        method : 'POST',
+        body : data
     })
 });
