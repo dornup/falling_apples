@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_bootstrap import Bootstrap
 from forms import RegisterForm, LoginForm
 from flask_login import UserMixin, LoginManager, login_user, logout_user, current_user, login_required
@@ -94,6 +94,6 @@ def home():
 @app.route('/change_login', methods=['POST'])
 @login_required
 def change_login():
-    return 1
+    return jsonify({'message': 'все гуд'}), 200
 
 app.run(debug=True)
