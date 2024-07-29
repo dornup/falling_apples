@@ -89,6 +89,8 @@ def login():
 @app.route("/home")
 @login_required
 def home():
+    new_login = request.form.get("login")
+    print(new_login)
     return render_template('home.html')
 
 @app.route('/change_login', methods=['POST'])
