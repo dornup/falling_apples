@@ -89,13 +89,19 @@ def login():
 @app.route("/home")
 @login_required
 def home():
-    new_login = request.form.get("login")
-    print(new_login)
+    
     return render_template('home.html')
 
 @app.route('/change_login', methods=['POST'])
 @login_required
 def change_login():
+    new_login = request.form.get("login")
+    if len(new_login) > 0 and " " not in new_login and new_login[0].isalpha():
+        current_user.login = new_login
+        db.session.commit()
+        print('KJUBY BPVTYTY')
+
+    print(new_login)
     return jsonify({'message': 'все гуд'}), 200
 
 app.run(debug=True)
